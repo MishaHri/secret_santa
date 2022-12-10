@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_10_120321) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_10_135003) do
   create_table "draws", force: :cascade do |t|
     t.string "budget"
     t.string "date_of_presents_exchange"
@@ -18,4 +18,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_10_120321) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "party_members", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "role"
+    t.integer "draw_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["draw_id"], name: "index_party_members_on_draw_id"
+  end
+
+  add_foreign_key "party_members", "draws"
 end

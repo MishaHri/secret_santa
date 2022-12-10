@@ -1,5 +1,8 @@
-<%# <ul>
-  <% @draws.each do |draws| %>
-    <%# <li><%= link_to draw.date, draw_path(draw) %></li>
-  <%# <% end %>
-<%# </ul> %>
+<h1>all draws</h1>
+<ul>
+<% @draws.each do |draw| %>
+  <li>
+     <h2>Your event is on  <%= draw.date_of_presents_exchange %> and the budget is  <%= draw.budget%>$</h2>
+  </li>
+ <% end %>
+</ul>

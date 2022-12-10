@@ -1,42 +1,35 @@
 class DrawsController < ApplicationController
 
-  ####create a new draw
+   before_action :set_draw, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @draws = Draw.all
+  end
+
+  def show
+   end
 
   def new
-    @draw = Draw.new # Needed to instantiate the form_with
+    @draw = Draw.new
   end
 
   def create
     @draw = Draw.new(draw_params)
     @draw.save
-    redirect_to draw_path(@draw)
+    redirect_to draw_path(draw)
   end
 
   def edit
-    @user = Draw.find(params[:id])
   end
 
   def update
-    @draw = Draw.find(params[:id])
     @draw.update(draw_params)
-    redirect_to draw_path(@draw)
-  end
-
-   ####see all drawn so far
-
-  def index
-    @draws = Draw.all
-  end
-  ##### see one specific draw
-
-  def show
-    # @draw = Draw.find(params[:id])
+    redirect_to draw_path(draw)
   end
 
   def destroy
-    @draw =Draw.find(params[:id])
     @draw.destroy
-    redirect_to draw_path(@draw), status: :see_other
+    redirect_to draw_path, status: :see_other
   end
 
   private
@@ -44,4 +37,8 @@ class DrawsController < ApplicationController
   def draw_params
     params.require(:draw).permit(:budget, :date_of_presents_exchange)
   end
+  def set_draw
+    @draw = Draw.find(params[:id])
+  end
+
 end
