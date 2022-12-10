@@ -1,8 +1,26 @@
 <%# <%= @draw.name%>
 
-//page of one draw item
+<p> <strong>Party Members</strong></p>
+<ul class = "party-members">
+  <% @draw.party_members.each do |party_member| %>
+    <li class = "list-group-member">
+    <%= party_member.first_name %>
+    <%= party_member.last_name %>
+    <%= party_member.email %></li>
+  <% end %>
+ </ul>
+ <br>
+
 
 <%= link_to "Delete",
   draws_path(@draw),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
+
+<li class="list-group-item">
+  <%# <%= party_member.all%>
+  <%# <%= link_to "Delete",
+    party_member_path(party_member),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+</li>
