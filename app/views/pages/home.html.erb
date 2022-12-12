@@ -1,1 +1,40 @@
-<h1>Hello Santa</h1>
+<div class = "banner">
+<%= image_tag "secret_santa.png"%>
+<div class="banner-text">
+    <h1 class = "text-black">Secret Santa Time</h1>
+
+ <div class ="container">
+    <div id="typed-strings">
+      <p>Organising Secret Santa can be fun.</p>
+      <p>Life with presents is a lot better.</p>
+    </div>
+  </div>
+<div class = "row">
+  <div class ="column">
+    <div class = "card">
+      <h3><strong> Step 1</strong></h3>
+      <p>Create an event & setup a budget</p>
+      <i class="fa-sharp fa-solid fa-gifts"></i>
+    </div>
+  </div>
+  <div class ="column">
+    <div class = "card">
+      <h3><strong> Step 2</strong></h3>
+      <p>Add members to your party & Create a gift wish list</p>
+      <i class="fa-regular fa-face-party"></i>
+    </div>
+  </div>
+  <div class ="column">
+    <div class = "card">
+      <h3><strong> Step 3</strong></h3>
+      <p>Send the invites.</p>
+      <i class="fa-regular fa-paper-plane"></i>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+ <div>
+  <%= link_to "Start the party!", draws_new_path(@draw), class: "btn btn-primary mt-3"%>
+  </div>
+</div>
