@@ -2,6 +2,7 @@ class PartyMembersController < ApplicationController
 
 
   before_action :set_draw
+
   def new
     # We need @restaurant in our `simple_form_for`
     @party_member = Draw.find(params[:draw_id])
