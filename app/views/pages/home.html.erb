@@ -4,10 +4,9 @@
     <h1 class = "text-black">Secret Santa Time</h1>
 
  <div class ="container">
-    <div id="typed-strings">
       <p>Organising Secret Santa can be fun.</p>
       <p>Life with presents is a lot better.</p>
-    </div>
+  </div>
   </div>
 <div class = "row">
   <div class ="column">
@@ -35,6 +34,6 @@
   <br>
   <br>
  <div>
-  <%= link_to "Start the party!", draws_path(@draw), class: "btn btn-primary mt-3"%>
+  <%= link_to "Start the party!", new_draw_path, class: "btn btn-primary mt-3"%>
   </div>
 </div>

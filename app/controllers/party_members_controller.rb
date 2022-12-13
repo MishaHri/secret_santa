@@ -12,7 +12,7 @@ class PartyMembersController < ApplicationController
 def create
   @partymember = PartyMember.new(party_member_params)
   @party_member.save
-  redirect_to draw_path(@draw)
+  redirect_to new_party_members_path(@party_member)
 end
 
 def edit

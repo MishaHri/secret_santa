@@ -1,2 +1,5 @@
 <h1>Secret Santa Ready?</h1>
-<%= @assign%>
+<% @assign.each do |asign| %>
+    <li><%= asign %></li>
+  <% end %>
+</ul>

@@ -1,39 +1,40 @@
 class DrawsController < ApplicationController
 
-   before_action :set_draw, only: [:show, :edit, :update, :destroy]
+  #  before_action :set_draw, only: [:index,:show, :edit, :update, :destroy]
 
   def index
     @draws = Draw.all
   end
 
   def show
-   end
+    @draw = Draw.find(params[:id])
+  end
 
-  def new
+   def new
     @draw = Draw.new
   end
 
   def create
-    @draw = Draw.new(draw_params)
-    @draw.save
-    redirect_to draw_path(draw)
+  @draw = Draw.new(draw_params)
   end
 
   def edit
   end
 
   def update
+    @draw = Draw.find(params[:id])
     @draw.update(draw_params)
     redirect_to draw_path(draw)
   end
 
   def destroy
+    @draw = Draw.find(params[:id])
     @draw.destroy
-    redirect_to draw_path, status: :see_other
+    redirect_to draws_path, status: :see_other
   end
 
   def assign
-    @party_members = PartyMember.all
+    @draws = Draw.all
   end
 #   @party_member = Draw.find(params[:draw_id])
 #   # @party_member = PartyMember.all
@@ -62,8 +63,8 @@ private
   def draw_params
     params.require(:draw).permit(:budget, :date_of_presents_exchange)
   end
+
   # def set_draw
   #   @draw = Draw.find(params[:id])
   # end
-
 end

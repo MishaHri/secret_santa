@@ -1,2 +1,10 @@
 <h2>Add your party</h2>
-<%= render "form", draw: @draw %>
+<%= form_with model: @party_members do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name  %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name  %>
+  <%= f.label :email%>
+  <%= f.text_field :emailt%>
+  <%= f.submit %>
+<% end %>
