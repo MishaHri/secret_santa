@@ -1,10 +1,16 @@
-<h2>Add your party</h2>
-<%= form_with model: @party_members do |f| %>
+<div class = "text">
+<h2><span style="color: grey;">Step 2:  </span>Add your party</h2>
+</div>
+<br>
+
+<div class = "container-form">
+<%= simple_form_for [@draw, @party_member] do |f| %>
   <%= f.label :first_name %>
-  <%= f.text_field :first_name  %>
+  <%= f.text_field :first_name %>
   <%= f.label :last_name %>
   <%= f.text_field :last_name  %>
-  <%= f.label :email%>
-  <%= f.text_field :emailt%>
-  <%= f.submit %>
-<% end %>
+  <%= f.label :email %>
+  <%= f.text_field :email%>
+  <%= f.submit "Add", class: "btn btn-primary" %>
+  <% end %>
+</div>

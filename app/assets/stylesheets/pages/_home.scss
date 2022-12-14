@@ -1,20 +1,26 @@
 // Specific CSS for your home-page
-* {
-  box-sizing: border-box;
-}
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+.container-banner {
+  padding: 30px;
+  padding-left: 700px;
+ }
+
 
 /* Float four columns side by side */
 .column {
-  width: 25%;
-  padding: 0 10px;
+  align-items: center;
+  width: 30%;
+  padding: 20px 20px;
+  justify-content: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0;}
+.row {
+  justify-content: center;
+  align-items: center;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -34,13 +40,4 @@ body {
 .card:hover {
   transform: scale(1.1);
   background-color: #a9e8ec;
-}
-
-/* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
 }

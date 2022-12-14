@@ -1,9 +1,28 @@
-<h1>Your draw is happening on .....</h1>
 
-<%# <h2><%= @draws.date%></h2>
-<%# <p><%= @draw %></p>
+<div class = "container">
+<h1>Your draw is happening on:    <strong><%= @draw.date_of_presents_exchange%></strong></h1>
+</div>
 
-<%= link_to "Delete",
+ <div class = "button">
+  <%= link_to "Add party member!",   new_draw_party_member_path(@draw[:id]), class: "btn btn-danger btn-lg btn-block text-white"%>
+</div>
+
+
+<p><strong>Party Members</strong></p>
+<ul class="list-group">
+  <% @draw.party_members.each do |party_member| %>
+    <li class="list-group-item"><%= party_member.first_name %></li>
+  <% end %>
+</ul>
+<br>
+
+ <div class = "button">
+  <%= link_to "Start the associations", assign_draws_path(@draw[:id]), class: "btn btn-danger btn-lg btn-block text-white"%>
+</div>
+
+
+
+<%= link_to "Delete Draw",
   draws_path(@draw),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>

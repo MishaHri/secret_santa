@@ -1,13 +1,19 @@
-<div class = "banner">
-<%= image_tag "secret_santa.png"%>
-<div class="banner-text">
-    <h1 class = "text-black">Secret Santa Time</h1>
+<div class = "container-banner">
+  <div class= "image">
+    <%= image_tag "secret_santa.png"%>
+  </div>
+</div>
+
+  <div class ="text">
+       Secret Santa Time
+  </div>
 
  <div class ="container">
+ <%# <p><span data-controller="typed-js"></span></p> %>
       <p>Organising Secret Santa can be fun.</p>
       <p>Life with presents is a lot better.</p>
-  </div>
-  </div>
+</div>
+
 <div class = "row">
   <div class ="column">
     <div class = "card">
@@ -33,7 +39,7 @@
   <br>
   <br>
   <br>
- <div>
-  <%= link_to "Start the party!", new_draw_path, class: "btn btn-primary mt-3"%>
+ <div class = "button">
+  <%= link_to "Start the party!", new_draw_path, class: "btn btn-danger btn-lg btn-block text-white"%>
   </div>
-</div>
+ </div>
