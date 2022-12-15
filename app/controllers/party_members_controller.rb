@@ -3,8 +3,8 @@ class PartyMembersController < ApplicationController
   before_action :set_draw
 
   def new
-    @party_member = Draw.find(params[:draw_id])
-    @party_member = PartyMember.new
+     @party_member = PartyMember.new
+     @draw= Draw.find(params)
   end
 
   def create
