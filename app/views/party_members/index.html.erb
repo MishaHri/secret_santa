@@ -3,8 +3,12 @@
 <ul>
 <% @party_members.each do |party_member| %>
   <li>
- <%= party_members.first_name %></h2>
+ <%= party_member.first_name %></h2>
   </li>
  <% end %>
 </ul>
 </div>
+
+ <div class = "button">
+  <%# <%= link_to "Add more members!" new_draw_path class: "btn btn-danger btn-lg btn-block text-white" %>
+  </div>

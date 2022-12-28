@@ -16,8 +16,9 @@ class DrawsController < ApplicationController
   end
 
   def create
-  @draw = Draw.create(draw_params)
-  redirect_to draw_path(draws), alert: 'Draw created sucessfully'
+  @draw = Draw.new(draw_params)
+  @draw.save
+  redirect_to draws_show_path alert: 'Draw created sucessfully'
   end
 
   def edit
@@ -39,13 +40,15 @@ class DrawsController < ApplicationController
     @party_members = PartyMember.all
     def secret_santa(list)
       list_shuffle = list.shuffle
+      @assign_list = []
       i = 0
       while i < list_shuffle.count
-        puts ("#{list_shuffle[i]} will be gifting #{list_shuffle[i-1]}.")
+        @assign_list << "#{list_shuffle[i].first_name} will be gifting #{list_shuffle[i-1].first_name}."
       i+= 1
     end
+    @assign_list
     end
-    secret_santa(party_members)
+    secret_santa(@party_members)
   end
 
 

@@ -3,7 +3,7 @@
 <h2><span style="color: grey;">Step 1:  </span>Create a Secret Santa event</h2>
 </div>
 <div class ="container-form">
-  <%= form_with model: @user do |f| %>
+  <%= form_with model: @draw do |f| %>
   <%= f.label :date_of_presents_exchange %>
   <%= f.text_field :date_of_presents_exchange %>
   <%= f.label :budget%>
@@ -11,8 +11,7 @@
   <%= f.submit class: "btn btn-primary"%>
 <% end %>
 </div>
+
 <div class = "image">
       <%= image_tag "Secret_santa_ok.jpg" %>
 </div>
-
-  redirect_to  edit_draw_path

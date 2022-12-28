@@ -8,5 +8,7 @@ class PagesController < ApplicationController
   end
   def new
   end
+  def assign
+  end
 
 end

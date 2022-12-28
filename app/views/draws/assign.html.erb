@@ -1,12 +1,14 @@
-<h1><span style="color: grey;">Step 3:  </span>Secret Santa Ready?</h1>
+<h1><span style= "color: grey;">Step 3:  </span>Secret Santa Ready?</h1>
 
-<ul class="list-group">
-  <%# <% @draw.party_members.associate do |associate_members| %>
-    <%# <li class="list-group-item"> %>
-    <%# <%= associate_members%></li>
-  <%# <% end %>
+
+<ul>
+     <% @assign_list.each do |assign|%>
+  <li> <%= assign %></li>
+     <%end %>
 </ul>
 
+
+<br>
   <div class= "image">
     <%= image_tag "presents.jpg"%>
   </div>
