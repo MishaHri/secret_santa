@@ -1,24 +1,36 @@
-# README
+Secret Santa
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+What this app does
 
-* Ruby version
+Secret Santa meant to be a site to help organise secret santa events
+Creat an event add participants to it and create pair in one person gives a present and one person receive a present
 
-* System dependencies
+⭐ Key features
+User can view and create a draw event
+User can make the party association
 
-* Configuration
+Tools
 
-* Database creation
+Ruby on Rails
+Ruby
+Bootstrap
+HTML
+CSS
 
-* Database initialization
 
-* How to run the test suite
+Outstanding issues or additional features to build in the future
 
-* Services (job queues, cache servers, search engines, etc.)
+add a wish list to every participant 
 
-* Deployment instructions
 
-* ...
+create a login/logout option to save details for future  times 
+
+
+add the option to send invites via email 
+
+
+add the option to import a csv data base to avoid adding people manually 
+
+
+and many more 
