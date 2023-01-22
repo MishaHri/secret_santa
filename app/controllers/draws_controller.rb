@@ -18,7 +18,7 @@ class DrawsController < ApplicationController
   def create
   @draw = Draw.new(draw_params)
   @draw.save
-  redirect_to draws_show_path alert: 'Draw created sucessfully'
+  redirect_to draw_path(@draw), alert: 'Draw created sucessfully'
   end
 
   def edit
