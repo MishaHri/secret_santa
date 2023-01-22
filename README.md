@@ -3,7 +3,7 @@ Secret Santa
 
 What this app does
 
-Secret Santa meant to be a site to help organise secret santa events
+Secret Santa meant to be a web app to help organise secret santa events
 Creat an event add participants to it and create pair in one person gives a present and one person receive a present
 
 ⭐ Key features
