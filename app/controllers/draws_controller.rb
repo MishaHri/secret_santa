@@ -37,6 +37,8 @@ class DrawsController < ApplicationController
   end
 
   def assign
+    # @draw = Draw.find(params[:draw_id])
+    # @party_members = PartyMember.find(params[:id])
     @party_members = PartyMember.all
     def secret_santa(list)
       list_shuffle = list.shuffle

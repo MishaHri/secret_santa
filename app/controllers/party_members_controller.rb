@@ -11,7 +11,7 @@ class PartyMembersController < ApplicationController
     @party_member = PartyMember.new(party_member_params)
     @party_member.draw = @draw
     @party_member.save
-    redirect_to    draw_party_members_path
+    redirect_to  new_draw_party_member_path
   end
 
     ####see all drawn so far
@@ -23,25 +23,26 @@ class PartyMembersController < ApplicationController
 
     def show
       @party_members = PartyMember.find(params[:id])
+      @party_members = PartyMember.all
     end
 
-  # def edit
-  #   @party_member = PartyMember.find(params[:id])
-  # end
+  def edit
+    @party_member = PartyMember.find(params[:id])
+  end
 
-  # def update
-  #   @party_member = PartyMember.find(params[:id])
-  #   @party_member.update(party_member_params)
-  #   redirect_to draw_path(@draw)
-  # end
+  def update
+    @party_member = PartyMember.find(params[:id])
+    @party_member.update(party_member_params)
+    redirect_to draw_path(@draw)
+  end
 
 
 
-  # def destroy
-  #   @party_member = PartyMember.find(params[:id])
-  #   @party_member.destroy
-  #   redirect_to draw_path(@draw), status: :see_other
-  # end
+  def destroy
+    @party_member = PartyMember.find(params[:id])
+    @party_member.destroy
+    redirect_to draw_path(@draw), status: :see_other
+  end
 
 private
 

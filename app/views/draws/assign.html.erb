@@ -1,14 +1,21 @@
-<h1><span style= "color: grey;">Step 3:  </span>Secret Santa Ready?</h1>
+<br>
+<div class = "text">
+<h2><span style="color: grey;">Step 3:  </span>Secret Santa Ready?</h2>
+</div>
+<br>
 
-
+<div class = "container">
 <ul>
-     <% @assign_list.each do |assign|%>
+ <% @assign_list.each do |assign|%>
   <li> <%= assign %></li>
      <%end %>
 </ul>
+</div>
 
 
 <br>
-  <div class= "image">
+  <div class= "container-image">
     <%= image_tag "presents.jpg"%>
   </div>
+<br>
+<br>

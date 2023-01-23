@@ -14,3 +14,28 @@
   <%= f.submit "Add", class: "btn btn-primary" %>
   <% end %>
 </div>
+
+<br>
+<br>
+<div class = "container">
+<p>Party Members</p>
+</div>
+<br>
+<br>
+
+<div class= "container">
+<ul>
+  <% @draw.party_members.each do |party_member| %>
+    <li class="list-group-item"><%= party_member.first_name%>  <%= party_member.last_name%>  - email: <%= party_member.email%>
+    <%# <div class = "button"><%= link_to "Delete Member",
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+     </li>
+  <% end %>
+</ul>
+</div>
+<br>
+
+ <div class = "button">
+  <%= link_to "Finish", draw_path(@draw), class: "btn btn-danger btn-lg btn-block text-white"%>
+</div>
